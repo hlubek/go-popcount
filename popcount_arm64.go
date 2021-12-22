@@ -6,10 +6,6 @@ import "unsafe"
 
 var usePOPCNT = hasPOPCNT()
 
-func hasPOPCNT() bool {
-	return getProcFeatures()&(0xF<<20) != 15<<20
-}
-
 // CountBytes function counts number of non-zero bits in slice of 8bit unsigned integers.
 func CountBytes(s []byte) uint64 {
 	if len(s) == 0 {
